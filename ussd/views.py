@@ -9,8 +9,8 @@ def  welcome(request):
     return render(request, 'index.html')
 
 #  python3 -m pip install africastalking
-AfricasUsername='nadineuwimana72@gmail.com'
-api_key ='b3d0f29af6dc51c715e0329d46fc58cf2eb1fe583aa1b1da7bc117c2b428212a'
+AfricasUsername='turabayoimmacule@gmail.com'
+api_key ='8e70d9b7b66a13836369cbd2a7813b4b7fe036a9cc99df1f7464a89d960cd2c9'
 africastalking.initialize(AfricasUsername,api_key)
 
 @csrf_exempt
@@ -28,26 +28,26 @@ def ussdApp(request):
         response =""
         #  main menu for our application
         if text == '':
-            response =  "CON Murakaza neza kuri Idafarm \n"
-            response += "1. Kwandikisha igihingwa \n"
-            response += "2. Kumenya ingengabihe \n"
+            response =  "CON Murakaza neza kuri Hunikapp \n"
+            response += "1. Ikinyarwanda \n"
+            response += "2. English \n"
         elif text == '1':
             # SELECT * FROM PRODUCTMODEL where title="" ORDER BY ID DESC LIMIT 5
             fetchProducts = ProductsModel.objects.all()
-            response = "CON Hitamo igihingwa \n"
+            response = "CON Hitamo igihingwa cyo kubitsa \n"
             for  products in fetchProducts:
                 response += ""+str(products.id)+"."+str(products.title)+ "\n"
 
         elif text == '1*1':
-            product="Ibinyomoro"
-            response = "CON shyiramo ubuso bw'ubutaka bwawe bw' "+str(product)+"\n"
+            product="Ibirayi"
+            response = "CON shyiramo ubwoko "+str(product)+"\n"
         elif category =='1*1' and int(len(level)) == 3 and str(level[2]) in  str(level):
-            response = "CON Uwo mubufatanyije \n"
+            response = "CON shyiramo ibiro \n"
         elif category =='1*1' and int(len(level)) == 4 and str(level[3]) in  str(level):
-            response = "CON Shyiramo nimero y'irangamuntu yuwo mufatanyije \n"
+            response = "CON Shyiramo igihe bizahunikwa \n"
         elif category =='1*1' and int(len(level)) == 5 and str(level[4]) in  str(level):
             # save the data into the database
-            category='Ibinyomoro'
+            category='Ibirayi'
             sizeOfland=level[2]
             names= level[3]
             idnumber = level[4]
@@ -61,7 +61,7 @@ def ussdApp(request):
             idnumber=idnumber,
             )
             insert.save()
-            response = "END Murakoze kwiyandikisha kuri Ida farm \n"
+            response = "END Murakoze gukoresha hunikapp \n"
 
 
         elif text == '1*2':
