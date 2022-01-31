@@ -47,22 +47,22 @@ def ussdApp(request):
             response = "CON ubwoko bw ibihingwa \n"
             response += "1. ibinyameke \n"
             response += "2. ibinyamafufu \n"
-            response += "3. imboga n imbuto"
+            response += "3. imboga n imbut"
         elif category =='1*1' and int(len(level)) == 4 and str(level[3]) in  str(level):
             response = "CON Shyiramo igihe bizahunikwa \n"
             response += "1. ukwezi \n"
             response += "2.umwaka"
         elif category =='1*1' and int(len(level)) == 5 and str(level[4]) in  str(level):
             # save the data into the database
-            names= level[3]
-            idnumber = level[4]
-            insert = Hunikappuser(sessiondId=session_id,
-            serviceCode = service_code,
-            phoneNumber=phone_number,
-            names=names,
-            idnumber=idnumber,
-            )
-            insert.save()
+            #names= level[3]
+            #idnumber = level[4]
+            #insert = Hunikappuser(sessiondId=session_id,
+            #serviceCode = service_code,
+            #phoneNumber=phone_number,
+            #names=names,
+            #idnumber=idnumber,
+            #)
+            #insert.save()
             response = "END Murakoze kwiyandikisha kuri hunikapp\n"
 
 
