@@ -2,15 +2,15 @@ from django.contrib import admin
 from .models import *  #importing all models
 # Register your models here.
 
-class IdafarmuserAdmin (admin.ModelAdmin):
-    list_display =['phoneNumber', 'names']
+class HunikappuserAdmin (admin.ModelAdmin):
+    list_display =['phoneNumber']
     search_fields =['phoneNumber']
 
-class IteganyagiheAdmin (admin.ModelAdmin):
-    list_display = ['phonNumber', 'category']
-    search_fields = ['phonNumber', 'category']
+# class IteganyagiheAdmin (admin.ModelAdmin):
+#     list_display = ['phonNumber', 'category']
+#     search_fields = ['phonNumber', 'category']
 
 
-admin.site.register(Idafarmuser, IdafarmuserAdmin)
-admin.site.register(Iteganyagihe, IteganyagiheAdmin)
-admin.site.register(ProductsModel)
+# admin.site.register(hunikappuser, hunikappAdmin)
+# admin.site.register(Iteganyagihe, IteganyagiheAdmin)
+admin.site.register(Hunikappuser, HunikappuserAdmin )

@@ -33,30 +33,29 @@ def ussdApp(request):
             response += "2. English \n"
         elif text == '1':
             # SELECT * FROM PRODUCTMODEL where title="" ORDER BY ID DESC LIMIT 5
-            fetchProducts = ProductsModel.objects.all()
-            response = "CON Hitamo igihingwa cyo kubitsa \n"
-            for  products in fetchProducts:
-                response += ""+str(products.id)+"."+str(products.title)+ "\n"
+            #fetchProducts = HunikaappUserobjects.all()
+            response = "CON mwiyandikishe \n"
+            response += "1.Ukoresheje irangamuntu\n"
+            response += "2.Udakoresheje irangamuntu\n"
+            #for  hunikappAdmin in  hunikappAdmin:
+                #response += ""+str(products.id)+"."+str(products.title)+ "\n"
 
         elif text == '1*1':
-            product="Ibirayi"
-            response = "CON shyiramo ubwoko "+str(product)+"\n"
+            product=""
+            response = "CON shyiramo nimero y irangamuntu "+str(product)+"\n"
         elif category =='1*1' and int(len(level)) == 3 and str(level[2]) in  str(level):
             response = "CON shyiramo ibiro \n"
         elif category =='1*1' and int(len(level)) == 4 and str(level[3]) in  str(level):
             response = "CON Shyiramo igihe bizahunikwa \n"
+            response += "1. ukwezi \n"
+            response += "2.umwaka"
         elif category =='1*1' and int(len(level)) == 5 and str(level[4]) in  str(level):
             # save the data into the database
-            category='Ibirayi'
-            sizeOfland=level[2]
             names= level[3]
             idnumber = level[4]
-            insert = Idafarmuser(sessiondId=session_id,
+            insert = Hunikappuser(sessiondId=session_id,
             serviceCode = service_code,
             phoneNumber=phone_number,
-            level=level,
-            category=category,
-            sizeOfland=sizeOfland,
             names=names,
             idnumber=idnumber,
             )
