@@ -88,22 +88,22 @@ def ussdApp(request):
         #     idnumber=idnumber,
         #     )
         #     insert.save()
-            response = "END Murakoze kwiyandikisha kuri Ida farm \n"
+            # response = "END Murakoze kwiyandikisha kuri Ida farm \n"
          
         #  ======================== INGENGABIHE==================
         elif text == '2':
             response = "CON REGISTER HERE \n "
             response += "1.With ID\n"
             response += "2.Without ID\n"
-            elif text == '2*2':
+        elif text == '2*1':
             product=""
             response = "CON Enter your Id number "+str(product)+"\n"
-        elif category =='1*1' and int(len(level)) == 3 and str(level[2]) in  str(level):
+        elif category =='2*2' and int(len(level)) == 3 and str(level[2]) in  str(level):
             response = "CON Types Of Your Products \n"
             response += "1. Graineaters \n"
             response += "2. ibinyamafufu \n"
             response += "3. Vegetables&Fruits"
-        elif category =='1*1' and int(len(level)) == 4 and str(level[3]) in  str(level):
+        elif category =='2*3' and int(len(level)) == 4 and str(level[3]) in  str(level):
             response = "CON Period \n"
             response += "1. Months \n"
             response += "2.Year"
