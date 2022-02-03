@@ -29,8 +29,8 @@ def ussdApp(request):
         #  main menu for our application
         if text == '':
             response =  "CON Murakaza neza kuri Hunikapp \n"
-             response += "1. Ikinyarwanda \n"
-             response += "2. English \n"
+            response += "1. Ikinyarwanda \n"
+            response += "2. English \n"
     #     elif text == '1':
     #         response = "CON mwiyandikishe \n"
     #         response += "1.Ukoresheje irangamuntu\n"
