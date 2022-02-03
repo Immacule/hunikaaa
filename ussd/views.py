@@ -42,11 +42,11 @@ def ussdApp(request):
              response += "1. ibinyameke \n"
              response += "2. ibinyamafufu \n"
              response += "3. imboga n imbuto"
-    #     elif category =='1*1' and int(len(level)) == 4 and str(level[3]) in  str(level):
-    #         response = "CON Shyiramo igihe bizahunikwa \n"
-    #         response += "1. ukwezi \n"
-    #         response += "2.umwaka"
-    # #     elif category =='1*1' and int(len(level)) == 5 and str(level[4]) in  str(level):
+        elif category =='1*1' and int(len(level)) == 4 and str(level[3]) in  str(level):
+            response = "CON Shyiramo igihe bizahunikwa \n"
+            response += "1. ukwezi \n"
+            response += "2.umwaka"
+    #     elif category =='1*1' and int(len(level)) == 5 and str(level[4]) in  str(level):
     #          save the data into the database
     #         names= level[3]
     #         idnumber = level[4]
@@ -56,8 +56,8 @@ def ussdApp(request):
     #         names=names,
     #         idnumber=idnumber,
     #         )
-    #         insert.save()
-    #         response = "END Murakoze kwiyandikisha kuri hunikapp\n"
+             insert.save()
+            response = "END Murakoze kwiyandikisha kuri hunikapp\n"
 
 
     #     #   elif text == '1*2':
