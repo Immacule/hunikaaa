@@ -66,69 +66,69 @@ def ussdApp(request):
             response = "END Murakoze kwiyandikisha kuri hunikapp\n"
 
 
-          elif text == '1*2':
-              product ="Indimu"
-              response ="CON shyiramo ubuso bw'ubutaka bwawe bw' "+str(product)+"\n"
-          elif category =='1*2' and int(len(level)) == 3 and str(level[2]) in  str(level):
-              response = "CON Uwo mubufatanyije \n"
-          elif category =='1*2' and int(len(level)) == 4 and str(level[3]) in  str(level):
-              response = "CON Shyiramo nimero y'irangamuntu yuwo mufatanyije \n"
-          elif category =='1*2' and int(len(level)) == 5 and str(level[4]) in  str(level):
-              category='Indimu'
-              sizeOfland=level[2]
-              names= level[3]
-              idnumber = level[4]
-              insert = Idafarmuser(sessiondId=session_id,
-              serviceCode = service_code,
-              phoneNumber=phone_number,
-              level=level,
-              category=category,
-              sizeOfland=sizeOfland,
-              names=names,
-              idnumber=idnumber,
-              )
-              insert.save()
-              response = "END Murakoze kwiyandikisha kuri Ida farm \n"
+        #   elif text == '1*2':
+        #       product ="Indimu"
+        #       response ="CON shyiramo ubuso bw'ubutaka bwawe bw' "+str(product)+"\n"
+        #   elif category =='1*2' and int(len(level)) == 3 and str(level[2]) in  str(level):
+        #       response = "CON Uwo mubufatanyije \n"
+        #   elif category =='1*2' and int(len(level)) == 4 and str(level[3]) in  str(level):
+        #       response = "CON Shyiramo nimero y'irangamuntu yuwo mufatanyije \n"
+        #   elif category =='1*2' and int(len(level)) == 5 and str(level[4]) in  str(level):
+        #       category='Indimu'
+        #       sizeOfland=level[2]
+        #       names= level[3]
+        #       idnumber = level[4]
+        #       insert = Idafarmuser(sessiondId=session_id,
+        #       serviceCode = service_code,
+        #       phoneNumber=phone_number,
+        #       level=level,
+        #       category=category,
+        #       sizeOfland=sizeOfland,
+        #       names=names,
+        #       idnumber=idnumber,
+        #       )
+        #       insert.save()
+    #           response = "END Murakoze kwiyandikisha kuri Ida farm \n"
          
-    #       ======================== INGENGABIHE==================
-         elif text == '2':
-             response = "CON REGISTER HERE \n "
-             response += "1.With ID\n"
-             response += "2.Without ID\n"
-             elif text == '2*1':
-             insertData(
-                 category='Kabiri',
-                 sessionID=session_id,
-                 phoneNumber=phone_number
-             )
+    # #       ======================== INGENGABIHE==================
+    #      elif text == '2':
+    #          response = "CON REGISTER HERE \n "
+    #          response += "1.With ID\n"
+    #          response += "2.Without ID\n"
+    #          elif text == '2*1':
+    #          insertData(
+    #              category='Kabiri',
+    #              sessionID=session_id,
+    #              phoneNumber=phone_number
+    #          )
         
-             response = "CON Enter your Id number "+str(product)+"\n"
-         elif category =='2*2' and int(len(level)) == 3 and str(level[2]) in  str(level):
-             response = "CON Types Of Your Products \n"
-             response += "1. Graineaters \n"
-             response += "2. ibinyamafufu \n"
-             response += "3. Vegetables&Fruits"
-         elif category =='2*3' and int(len(level)) == 4 and str(level[3]) in  str(level):
-             response = "CON Period \n"
-             response += "1. Months \n"
-             response += "2.Year"
+    #          response = "CON Enter your Id number "+str(product)+"\n"
+    #      elif category =='2*2' and int(len(level)) == 3 and str(level[2]) in  str(level):
+    #          response = "CON Types Of Your Products \n"
+    #          response += "1. Graineaters \n"
+    #          response += "2. ibinyamafufu \n"
+    #          response += "3. Vegetables&Fruits"
+    #      elif category =='2*3' and int(len(level)) == 4 and str(level[3]) in  str(level):
+    #          response = "CON Period \n"
+    #          response += "1. Months \n"
+    #          response += "2.Year"
 
-          elif text == '2*1':
-               save the data
-              insertData(
-                  category='Rimwe',
-                  sessionID=session_id,
-                  phoneNumber=phone_number
-              )
-              response ="END Murakoze , tuzajya tubagezaho amakuru ku iteganyagihe rimwe mukwezi"
-              response ="END Murakoze , tuzajya tubagezaho amakuru ku iteganyagihe kabiri mukwezi"
-          elif text == '2*3':
-              insertData(
-                  category='Burigihe',
-                  sessionID=session_id,
-                  phoneNumber=phone_number
-              )
-             response ="END THANKS FOR REACHING TO US"
+    #       elif text == '2*1':
+    #            save the data
+    #           insertData(
+    #               category='Rimwe',
+    #               sessionID=session_id,
+    #               phoneNumber=phone_number
+    #           )
+    #           response ="END Murakoze , tuzajya tubagezaho amakuru ku iteganyagihe rimwe mukwezi"
+    #           response ="END Murakoze , tuzajya tubagezaho amakuru ku iteganyagihe kabiri mukwezi"
+    #       elif text == '2*3':
+    #           insertData(
+    #               category='Burigihe',
+    #               sessionID=session_id,
+    #               phoneNumber=phone_number
+    #           )
+    #          response ="END THANKS FOR REACHING TO US"
 
          else:
              response = "END INVALID OPTION, TRY LATER"
