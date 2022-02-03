@@ -35,13 +35,13 @@ def ussdApp(request):
             response = "CON mwiyandikishe \n"
             response += "1.Ukoresheje irangamuntu\n"
             response += "2.Udakoresheje irangamuntu\n"
-    #     elif text == '1*1':
-    #         response = "CON shyiramo nimero y irangamuntu "+str(product)+"\n"
-    #     elif category =='1*1' and int(len(level)) == 3 and str(level[2]) in  str(level):
-    #         response = "CON ubwoko bw ibihingwa \n"
-    #         response += "1. ibinyameke \n"
-    #         response += "2. ibinyamafufu \n"
-    #         response += "3. imboga n imbuto"
+        elif text == '1*1':
+            response = "CON shyiramo nimero y irangamuntu "+str(product)+"\n"
+        elif category =='1*1' and int(len(level)) == 3 and str(level[2]) in  str(level):
+            response = "CON ubwoko bw ibihingwa \n"
+            response += "1. ibinyameke \n"
+            response += "2. ibinyamafufu \n"
+            response += "3. imboga n imbuto"
     #     elif category =='1*1' and int(len(level)) == 4 and str(level[3]) in  str(level):
     #         response = "CON Shyiramo igihe bizahunikwa \n"
     #         response += "1. ukwezi \n"
