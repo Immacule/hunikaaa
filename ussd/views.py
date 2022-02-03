@@ -32,16 +32,10 @@ def ussdApp(request):
             response += "1. Ikinyarwanda \n"
             response += "2. English \n"
         elif text == '1':
-            # SELECT * FROM PRODUCTMODEL where title="" ORDER BY ID DESC LIMIT 5
-            #fetchProducts = HunikaappUserobjects.all()
             response = "CON mwiyandikishe \n"
             response += "1.Ukoresheje irangamuntu\n"
             response += "2.Udakoresheje irangamuntu\n"
-            #for  hunikappAdmin in  hunikappAdmin:
-                #response += ""+str(products.id)+"."+str(products.title)+ "\n"
-
         elif text == '1*1':
-            product=""
             response = "CON shyiramo nimero y irangamuntu "+str(product)+"\n"
         elif category =='1*1' and int(len(level)) == 3 and str(level[2]) in  str(level):
             response = "CON ubwoko bw ibihingwa \n"
@@ -130,8 +124,8 @@ def ussdApp(request):
     #           )
     #          response ="END THANKS FOR REACHING TO US"
 
-         else:
-             response = "END INVALID OPTION, TRY LATER"
-         return HttpResponse(response)
-     else:
-         return HttpResponse('we are on ussd app')
+        else:
+            response = "END INVALID OPTION, TRY LATER"
+        return HttpResponse(response)
+    else:
+        return HttpResponse('we are on ussd app')
